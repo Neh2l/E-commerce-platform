@@ -11,6 +11,7 @@ import * as z from "zod";
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import Signup from './signup';
 
 
 
@@ -134,6 +135,7 @@ const Login = () => {
       >
         Login
       </Button>
+      <Typography>don't have an account <IconButton onClick={()=>navigate('/signup')}>Signup</IconButton></Typography>
     </Container>
     </Box>
   )
