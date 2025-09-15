@@ -47,7 +47,6 @@ const Hero = () => {
           </Box>
         </SwiperSlide>
 
-        {/* Slide 2 */}
         <SwiperSlide>
           <Box sx={{ position: "relative", width: "100%", height: "100%" }}>
             <img
@@ -73,7 +72,6 @@ const Hero = () => {
           </Box>
         </SwiperSlide>
 
-        {/* Slide 3 */}
         <SwiperSlide>
           <Box sx={{ position: "relative", width: "100%", height: "100%" }}>
             <img
