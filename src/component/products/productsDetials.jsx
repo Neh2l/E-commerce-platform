@@ -10,25 +10,45 @@ import FavoriteIcon from '@mui/icons-material/Favorite'
 
 const ProductsDetials = () => {
   let [product, setproduct] = useState({})
+    let [loading, setLoading] = useState(true)
+
   let { id } = useParams()
-  // let navigate = useNavigate()
 
   useEffect(() => {
     async function getData() {
       setTimeout(async () => {
         try {
           let { data } = await axios.get(
-            'https://api.escuelajs.co/api/v1/products/' + id
+            'http://localhost:5001/products/' + id
           )
           setproduct(data)
         } catch (err) {
           console.error(err)
+        }finally {
+          setLoading(false)
         }
       }, 5000)
     }
+
     getData()
   }, [id])
 
+    if (loading) {
+    return (
+      <Container
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          minHeight: '80vh',
+        }}
+      >
+       <div className="spinner-border" role="status">
+  <span className="visually-hidden">Loading...</span>
+</div>
+      </Container>
+    )
+  }
   return (
     <Box
       sx={{
@@ -56,7 +76,7 @@ const ProductsDetials = () => {
             <CardMedia
               component="img"
               image={product.images ? product.images[0] : product.image}
-              alt={product.title}
+              alt={product.name}
               sx={{
                 height: { xs: '30vh', sm: '40vh', md: '50vh' }, 
                 width: { xs: '100%', sm: '70%', md: '50vh' }, 
@@ -74,7 +94,7 @@ const ProductsDetials = () => {
               width: { xs: '100%', md: '50%' }, 
             }}
           >
-            <Typography variant="h5">{product.title}</Typography>
+            <Typography variant="h5">{product.name}</Typography>
             <Typography color="error" variant="h5">
               {product.price}$
             </Typography>

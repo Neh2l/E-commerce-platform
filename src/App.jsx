@@ -1,6 +1,5 @@
 import Typography from "@mui/material/Typography";
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import { ColorModeContext, useMode } from "./component/theme";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './component/home/home'
 import Login from "./component/register&login/login";
@@ -12,15 +11,13 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';  
 import Profile from "./component/profile/profile";
 import Error from "./component/error";
+import Handle from "./component/products/handle";
 
 
 function App() {
-  const [theme, colorMode] = useMode();
 
   return (
-    <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
+    
         <BrowserRouter>
           <ToastContainer/>
 
@@ -32,13 +29,13 @@ function App() {
               <Route path="/signup" element={<Signup />} />
 
               <Route path="/products" element={<Products />} />
+              <Route path="/handle" element={<Handle />} />
               <Route path="/products/:id" element={<ProductsDetials />} />
               <Route path="*" element={<Error/>}/>
             </Route>
           </Routes>
         </BrowserRouter>
-      </ThemeProvider>
-    </ColorModeContext.Provider>
+   
   );
 }
 

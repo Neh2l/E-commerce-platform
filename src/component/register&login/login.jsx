@@ -70,7 +70,8 @@ const Login = () => {
         gap: "1rem",
         borderRadius: "1rem",
         boxShadow: "0 0 4px gray",
-        mt: "3rem"
+        mt: "3rem",
+        color:"white"
       }}
     >
       <Box>
@@ -82,7 +83,7 @@ const Login = () => {
         </Typography>
       </Box>
 
-      <Box sx={{ width: 500, maxWidth: '100%' }}>
+      <Box sx={{ width: 500, maxWidth: '100%' ,color:"white" }}>
         <TextField
           fullWidth
           label="email"
@@ -92,11 +93,16 @@ const Login = () => {
           onChange={handleChange}
           error={!!formErrors.email}
           helperText={formErrors.email}  
+          sx={{
+            color:"white"
+          }}
         />
       </Box>
 
-      <Box sx={{ width: 500, maxWidth: '100%' }}>
-        <TextField
+      <Box sx={{ width: 500, maxWidth: '100%' ,color:"white"}}>
+        <TextField   sx={{
+            color:"white"
+          }}
           fullWidth
           id="outlined-password-input"
           label="Password"
@@ -112,7 +118,7 @@ const Login = () => {
 
       <Button
         variant="contained"
-        sx={{ width: 500, maxWidth: '100%' }}
+        sx={{ width: 500, maxWidth: '100%'  ,color:"white"}}
         onClick={handleSubmit}
       >
         Login

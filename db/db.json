@@ -1,0 +1,180 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Apple iPhone 15",
+      "category": "Smartphones",
+      "price": 1200,
+      "description": "The latest iPhone with A17 Bionic chip and advanced camera features.",
+      "image": "/images/p1.jpg",
+      "rating": 4.8
+    },
+    {
+      "id": "2",
+      "name": "Samsung Galaxy S23",
+      "category": "Smartphones",
+      "price": 1100,
+      "description": "High-performance smartphone with stunning display and great battery life.",
+      "image": "/images/p2.jpg",
+      "rating": 4.6
+    },
+    {
+      "id": "3",
+      "name": "Sony WH-1000XM5",
+      "category": "Headphones",
+      "price": 350,
+      "description": "Industry-leading noise-canceling wireless headphones.",
+      "image": "/images/p3.jpg",
+      "rating": 4.9
+    },
+    {
+      "id": "4",
+      "name": "Apple MacBook Pro 16",
+      "category": "Laptops",
+      "price": 2500,
+      "description": "Powerful laptop with M2 Pro chip, ideal for creative professionals.",
+      "image": "/images/p4.jpg",
+      "rating": 4.7
+    },
+    {
+      "id": "5",
+      "name": "Dell XPS 13",
+      "category": "Laptops",
+      "price": 1400,
+      "description": "Compact and high-performance laptop with InfinityEdge display.",
+      "image": "/images/p5.jpg",
+      "rating": 4.5
+    },
+    {
+      "id": "6",
+      "name": "Apple iPad Pro",
+      "category": "Tablets",
+      "price": 1000,
+      "description": "Powerful tablet with Liquid Retina XDR display and M2 chip.",
+      "image": "/images/p6.jpg",
+      "rating": 4.8
+    },
+    {
+      "id": "7",
+      "name": "Amazon Echo Dot",
+      "category": "Smart Home",
+      "price": 50,
+      "description": "Smart speaker with Alexa voice assistant for your home.",
+      "image": "/images/p7.jpg",
+      "rating": 4.4
+    },
+    {
+      "id": "8",
+      "name": "GoPro HERO12",
+      "category": "Cameras",
+      "price": 400,
+      "description": "High-quality action camera for all your adventures.",
+      "image": "/images/p8.jpg",
+      "rating": 4.6
+    },
+    {
+      "id": "9",
+      "name": "Sony PlayStation 5",
+      "category": "Gaming",
+      "price": 600,
+      "description": "Next-generation gaming console with ultra-fast SSD.",
+      "image": "/images/p9.jpg",
+      "rating": 4.9
+    },
+    {
+      "id": "10",
+      "name": "Xbox Series X",
+      "category": "Gaming",
+      "price": 550,
+      "description": "Powerful gaming console with 4K graphics and high-speed performance.",
+      "image": "/images/p10.jpg",
+      "rating": 4.8
+    },
+    {
+      "id": "11",
+      "name": "Fitbit Charge 6",
+      "category": "Wearables",
+      "price": 180,
+      "description": "Fitness tracker with heart rate monitoring and sleep tracking.",
+      "image": "/images/p11.jpg",
+      "rating": 4.5
+    },
+    {
+      "id": "12",
+      "name": "Canon EOS R6",
+      "category": "Cameras",
+      "price": 2500,
+      "description": "Full-frame mirrorless camera with excellent low-light performance.",
+      "image": "/images/p12.jpg",
+      "rating": 4.8
+    },
+    {
+      "id": "13",
+      "name": "Google Pixel 8",
+      "category": "Smartphones",
+      "price": 900,
+      "description": "Google's latest phone with advanced AI features and camera.",
+      "image": "/images/p13.jpg",
+      "rating": 4.6
+    },
+    {
+      "id": "14",
+      "name": "Lenovo ThinkPad X1",
+      "category": "Laptops",
+      "price": 1600,
+      "description": "Business laptop with robust build and high performance.",
+      "image": "/images/p14.jpg",
+      "rating": 4.7
+    },
+    {
+      "id": "15",
+      "name": "Bose QuietComfort Earbuds",
+      "category": "Headphones",
+      "price": 280,
+      "description": "Noise-canceling earbuds with amazing sound quality.",
+      "image": "/images/p15.jpg",
+      "rating": 4.8
+    },
+    {
+      "id": "2025-09-15T15:07:40.977Z",
+      "name": "airboth",
+      "category": "bcbcv",
+      "price": "122",
+      "description": "mnkjxdkjjkxjkdbcbvcbn",
+      "image": "https://img.fantaskycdn.com/b984c69987de0183cc9c4a7df3c61ef9_1024x.jpeg",
+      "rating": "2"
+    },
+    {
+      "id": "2025-09-15T15:08:21.388Z",
+      "name": "ncbbncbn",
+      "category": "gagfs",
+      "price": "112",
+      "description": "oudiufyuchhhhjhvn",
+      "image": "https://i.pinimg.com/736x/07/8b/94/078b949b124a7f1d1349a440914b9d40.jpg",
+      "rating": "2"
+    },
+    {
+      "id": "2025-09-15T15:14:30.338Z",
+      "name": "nehal",
+      "category": "ncb n",
+      "price": "444",
+      "description": "cnncnbhsghghlkslks",
+      "image": "https://i.pinimg.com/736x/75/ab/7a/75ab7a057e393414cb9fa3a0c58ea436.jpg",
+      "rating": "2"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Emily Smith",
+      "email": "emily@example.com",
+      "password": "123456"
+    },
+    {
+      "id": "2",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "password"
+    }
+  ]
+}

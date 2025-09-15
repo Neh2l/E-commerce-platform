@@ -6,14 +6,13 @@ import { Box } from '@mui/material'
 
 const Layout = () => {
   return (
-    <>
+    <Box display="flex" flexDirection="column" minHeight="100vh">
       <Header1/>
       <Box flex={1}>
-              <Outlet/>
-
+        <Outlet/>
       </Box>
       <Footer/>
-    </>
+    </Box>
   )
 }
 

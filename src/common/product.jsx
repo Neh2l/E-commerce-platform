@@ -3,7 +3,7 @@
   import ToggleButton from '@mui/material/ToggleButton';
   import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 //   import { useState,useEffect } from 'react';
-  import { useNavigate,useParams } from 'react-router';
+  import { useNavigate } from 'react-router';
   import Card from '@mui/material/Card';
   import CardActions from '@mui/material/CardActions';
   import CardContent from '@mui/material/CardContent';

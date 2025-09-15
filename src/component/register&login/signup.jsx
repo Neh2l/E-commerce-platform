@@ -82,7 +82,9 @@ const [formData, setFormData] = useState({ fname:"",lname:"",address:"",email: "
          gap:"1rem",
          borderRadius:"1rem",
          boxShadow:"0 0 4px gray",
-             mt:"3rem"  
+             mt:"3rem"  ,
+             color:"white"
+            
 
        
 
@@ -123,7 +125,6 @@ const [formData, setFormData] = useState({ fname:"",lname:"",address:"",email: "
           id="lname"
            name="lname"
           label="last name"
-          // placeholder="Placeholder"
           multiline
           onChange={handleChange}
           value={formData.lname}
@@ -144,6 +145,7 @@ const [formData, setFormData] = useState({ fname:"",lname:"",address:"",email: "
         value={formData.email}
           error={!!formErrors.email}
           helperText={formErrors.email}
+
        />
     </Box>
     

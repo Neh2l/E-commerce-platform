@@ -1,35 +1,50 @@
  import { Box, Container, Stack, Typography } from '@mui/material'
   import React from 'react'
-  import ToggleButton from '@mui/material/ToggleButton';
-  import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
   import { useState,useEffect } from 'react';
-//   import { useNavigate,useParams } from 'react-router';
-  import Card from '@mui/material/Card';
-  import CardActions from '@mui/material/CardActions';
-  import CardContent from '@mui/material/CardContent';
-  import CardMedia from '@mui/material/CardMedia';
+  import { useNavigate } from 'react-router';
   import Button from '@mui/material/Button';
   import axios from 'axios';
-import { Product } from '../../common/product';
+  import { Product } from '../../common/product';
    
 
 
 export  function  Products() {
      const [products, setProducts] = useState([]);
+         let [loading, setLoading] = useState(true)
+     let navigate=useNavigate();
 
   useEffect(() => {
     axios
-      .get("https://api.escuelajs.co/api/v1/products")
+      .get("http://localhost:5001/products")
       .then((res) => {
         let data=res.data;
-                // data = data.filter(p => p.category.name === "Electronics");
+                // data = data.slice(1,7);
                 setProducts(data);
     
      })
       .catch((err) => {
         console.error("Error fetching products:", err);
-      });
+      }).finally(()=>{
+        setLoading(false)
+      })
   }, []);
+  
+   if (loading) {
+      return (
+        <Container
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: '80vh',
+          }}
+        >
+         <div className="spinner-border" role="status">
+    <span className="visually-hidden">Loading...</span>
+  </div>
+        </Container>
+      )
+    }
   return (
     <Container sx={
 
@@ -42,6 +57,8 @@ export  function  Products() {
        {products.map((product) => (
           <Product key={product.id} product={product} />
         ))}
+                <Button variant="contained" color="error" onClick={() => navigate(`/handle`)}>Mange products</Button>
+        
     </Container>
   )
 }
