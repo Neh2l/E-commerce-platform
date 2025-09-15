@@ -1,4 +1,4 @@
-import { Container, Typography, Button } from '@mui/material'
+import { Container, Typography, Button, IconButton } from '@mui/material'
 import React, { useState } from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -10,6 +10,8 @@ import FormLabel from '@mui/material/FormLabel';
 import * as z from "zod";
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router';
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+
 
 
 const schema = z.object({
@@ -58,6 +60,15 @@ const Login = () => {
   }
 
   return (
+<Box>
+    <IconButton onClick={()=>{navigate('/')}}>
+          <ArrowCircleLeftIcon sx={
+            {
+              fontSize:"3rem",
+              m:"1rem"
+            }
+          }/>
+        </IconButton> 
     <Container
       sx={{
         background: "#283445",
@@ -124,6 +135,7 @@ const Login = () => {
         Login
       </Button>
     </Container>
+    </Box>
   )
 }
 

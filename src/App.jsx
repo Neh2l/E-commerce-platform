@@ -18,7 +18,7 @@ function App() {
 
   return (
     
-        <BrowserRouter>
+        <BrowserRouter basename="/E-commerce-platform">
           <ToastContainer/>
 
           <Routes>

@@ -2,15 +2,19 @@ import React from 'react'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
-import { Box, Container, Stack, Typography } from '@mui/material'
+import { Box, Container, IconButton, Stack, Typography } from '@mui/material'
 import CardMedia from '@mui/material/CardMedia'
 import Button from '@mui/material/Button'
 import Rating from '@mui/material/Rating'
 import FavoriteIcon from '@mui/icons-material/Favorite'
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import { useNavigate } from 'react-router'
+
 
 const ProductsDetials = () => {
   let [product, setproduct] = useState({})
     let [loading, setLoading] = useState(true)
+    let navigate=useNavigate();
 
   let { id } = useParams()
 
@@ -35,6 +39,7 @@ const ProductsDetials = () => {
 
     if (loading) {
     return (
+      
       <Container
         sx={{
           display: 'flex',
@@ -55,6 +60,14 @@ const ProductsDetials = () => {
         flexWrap: 'wrap',
       }}
     >
+        <IconButton onClick={()=>{navigate('/')}}>
+          <ArrowCircleLeftIcon sx={
+            {
+              fontSize:"3rem",
+              m:"1rem"
+            }
+          }/>
+        </IconButton>  
       <Container
         sx={{
           display: 'flex',

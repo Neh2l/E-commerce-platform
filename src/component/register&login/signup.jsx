@@ -11,6 +11,8 @@ import * as z from "zod";
 import { toast } from 'react-toastify';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+
 
 
 const schema = z.object({
@@ -69,6 +71,15 @@ const [formData, setFormData] = useState({ fname:"",lname:"",address:"",email: "
 
 
   return (
+    <Box>
+       <IconButton onClick={()=>{navigate('/')}}>
+          <ArrowCircleLeftIcon sx={
+            {
+              fontSize:"3rem",
+              m:"1rem"
+            }
+          }/>
+        </IconButton> 
     <Container 
       sx={
         {
@@ -204,6 +215,7 @@ const [formData, setFormData] = useState({ fname:"",lname:"",address:"",email: "
 
 
     </Container>
+    </Box>
   )
 }
 

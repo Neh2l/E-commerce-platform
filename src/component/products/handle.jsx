@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
 import { toast } from 'react-toastify'
 import { Box, Container, TextField, Button, Typography } from '@mui/material'
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+
 
 const productSchema = z.object({
     name :  z.string("value must be string").min(3,"value must be above 3 character").max(30 , "value must be under 31 character")  ,
@@ -49,6 +51,16 @@ const Handle = () => {
     }
 
   return (
+    <Box>
+         <IconButton onClick={()=>{navigate('/')}}>
+                  <ArrowCircleLeftIcon sx={
+                    {
+                      fontSize:"3rem",
+                      m:"1rem"
+                    }
+                  }/>
+                </IconButton> 
+    
     <Container maxWidth="sm" sx={{ mt: 4 }}>
       <Typography variant="h5" align="center" color="error" gutterBottom>
         Add product
@@ -121,6 +133,7 @@ const Handle = () => {
         </Button>
       </Box>
     </Container>
+    </Box>
   )
 }
 

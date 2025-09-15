@@ -1,10 +1,12 @@
- import { Box, Container, Stack, Typography } from '@mui/material'
+ import { Box, Container, IconButton, Stack, Typography } from '@mui/material'
   import React from 'react'
   import { useState,useEffect } from 'react';
   import { useNavigate } from 'react-router';
   import Button from '@mui/material/Button';
   import axios from 'axios';
   import { Product } from '../../common/product';
+  import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+  
    
 
 
@@ -46,6 +48,15 @@ export  function  Products() {
       )
     }
   return (
+    <Box>
+    <IconButton onClick={()=>{navigate('/')}}>
+          <ArrowCircleLeftIcon sx={
+            {
+              fontSize:"3rem",
+              m:"1rem"
+            }
+          }/>
+        </IconButton>   
     <Container sx={
 
         {
@@ -53,6 +64,7 @@ export  function  Products() {
             flexWrap:"wrap"
         }
     }>
+      
 
        {products.map((product) => (
           <Product key={product.id} product={product} />
@@ -60,5 +72,6 @@ export  function  Products() {
                 <Button variant="contained" color="error" onClick={() => navigate(`/handle`)}>Mange products</Button>
         
     </Container>
+    </Box>
   )
 }

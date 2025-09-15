@@ -73,7 +73,7 @@ const Header2 = () => {
     }}>
      <Box flexGrow={1} sx={{ display:"flex", flexDirection:{ xs:"column", md:"row" }, gap:"1rem" }}>
         <Stack alignItems="center">
-          <DiamondIcon />
+         <IconButton onClick={()=>{navigate('/')}}> <DiamondIcon /></IconButton>
           <Typography>Ovela</Typography>
         </Stack>
         <Search sx={{ borderRadius:"10px", width:{ xs:"100%", md:"80%" } }}>

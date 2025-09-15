@@ -1,14 +1,28 @@
-import { Box, Button, Container, Stack, Typography } from '@mui/material'
+import { Box, Button, Container, IconButton, Stack, Typography } from '@mui/material'
 import React from 'react'
 import proImg from '../../assets/profile-removebg-preview.png'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import { useNavigate } from 'react-router';
 
 const Profile = () => {
+  let navigate=useNavigate();
   return (
+
+    <Box>
+       <IconButton onClick={()=>{navigate('/')}}>
+          <ArrowCircleLeftIcon sx={
+            {
+              fontSize:"3rem",
+              m:"1rem"
+            }
+          }/>
+        </IconButton> 
     <Container sx={{ py: 4 }}>
+
       <Typography variant="h4" textAlign="center" mb={3}>
         Profile
       </Typography>
@@ -93,6 +107,7 @@ const Profile = () => {
         </Box>
       </Stack>
     </Container>
+    </Box>
   )
 }
 
