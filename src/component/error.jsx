@@ -6,7 +6,7 @@ const Error = () => {
     <Container sx={
 
         {
-               display: "flex",
+     display: "flex",
     flexDirection: "column",
     alignItems: "center",     
     justifyContent: "center", 

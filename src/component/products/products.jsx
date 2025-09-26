@@ -17,10 +17,9 @@ export  function  Products() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5001/products")
+      .get("https://dummyjson.com/products")
       .then((res) => {
-        let data=res.data;
-                // data = data.slice(1,7);
+           let data = res.data.products;                
                 setProducts(data);
     
      })

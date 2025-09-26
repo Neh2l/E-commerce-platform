@@ -23,7 +23,7 @@ const ProductsDetials = () => {
       setTimeout(async () => {
         try {
           let { data } = await axios.get(
-            'http://localhost:5001/products/' + id
+            'https://dummyjson.com/products/' + id
           )
           setproduct(data)
         } catch (err) {
@@ -107,7 +107,7 @@ const ProductsDetials = () => {
               width: { xs: '100%', md: '50%' }, 
             }}
           >
-            <Typography variant="h5">{product.name}</Typography>
+            <Typography variant="h5">{product.title}</Typography>
             <Typography color="error" variant="h5">
               {product.price}$
             </Typography>

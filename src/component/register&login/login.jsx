@@ -108,6 +108,15 @@ const Login = () => {
           sx={{
             color:"white"
           }}
+          InputLabelProps={{
+    style: { color: "#cccc" },
+  }}
+  InputProps={{
+    style: { color: "#cccc" },
+  }}
+  FormHelperTextProps={{
+    style: { color: "#cccc" },
+  }}
         />
       </Box>
 
@@ -125,6 +134,15 @@ const Login = () => {
           onChange={handleChange}
           error={!!formErrors.password}
           helperText={formErrors.password}
+          InputLabelProps={{
+    style: { color: "#cccc" },
+  }}
+  InputProps={{
+    style: { color: "#cccc" },
+  }}
+  FormHelperTextProps={{
+    style: { color: "#cccc" },
+  }}
         />
       </Box>
 

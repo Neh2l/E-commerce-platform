@@ -1,4 +1,4 @@
-import { Container,Typography,Button } from '@mui/material'
+import { Container,Typography,Button, IconButton } from '@mui/material'
 import React from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -130,6 +130,15 @@ const [formData, setFormData] = useState({ fname:"",lname:"",address:"",email: "
           onChange={handleChange}
           error={!!formErrors.fname}
           helperText={formErrors.fname}
+          InputLabelProps={{
+    style: { color: "#cccc" },
+  }}
+  InputProps={{
+    style: { color: "#cccc" },
+  }}
+  FormHelperTextProps={{
+    style: { color: "#cccc" },
+  }}
         />
         <TextField
         sx={{ width: 300, maxWidth: '55%' }}
@@ -141,6 +150,15 @@ const [formData, setFormData] = useState({ fname:"",lname:"",address:"",email: "
           value={formData.lname}
           error={!!formErrors.lname}
           helperText={formErrors.lname}
+          InputLabelProps={{
+    style: { color: "#cccc" },
+  }}
+  InputProps={{
+    style: { color: "#cccc" },
+  }}
+  FormHelperTextProps={{
+    style: { color: "#cccc" },
+  }}
         />
         
         </div>
@@ -156,6 +174,15 @@ const [formData, setFormData] = useState({ fname:"",lname:"",address:"",email: "
         value={formData.email}
           error={!!formErrors.email}
           helperText={formErrors.email}
+          InputLabelProps={{
+    style: { color: "#cccc" },
+  }}
+  InputProps={{
+    style: { color: "#cccc" },
+  }}
+  FormHelperTextProps={{
+    style: { color: "#cccc" },
+  }}
 
        />
     </Box>
@@ -170,6 +197,15 @@ const [formData, setFormData] = useState({ fname:"",lname:"",address:"",email: "
        value={formData.address}
           error={!!formErrors.address}
           helperText={formErrors.address}
+          InputLabelProps={{
+    style: { color: "#cccc" },
+  }}
+  InputProps={{
+    style: { color: "#cccc" },
+  }}
+  FormHelperTextProps={{
+    style: { color: "#cccc" },
+  }}
        />
     </Box>
      {/* <Box sx={{ width: 500, maxWidth: '100%' }}>
@@ -191,6 +227,15 @@ const [formData, setFormData] = useState({ fname:"",lname:"",address:"",email: "
           value={formData.password}
           error={!!formErrors.password}
           helperText={formErrors.password}
+          InputLabelProps={{
+    style: { color: "#cccc" },
+  }}
+  InputProps={{
+    style: { color: "#cccc" },
+  }}
+  FormHelperTextProps={{
+    style: { color: "#cccc" },
+  }}
         />
 
     </Box>
@@ -205,6 +250,15 @@ const [formData, setFormData] = useState({ fname:"",lname:"",address:"",email: "
           onChange={handleChange}
           error={!!formErrors.confirmPassword}
           helperText={formErrors.confirmPassword}
+          InputLabelProps={{
+    style: { color: "#cccc" },
+  }}
+  InputProps={{
+    style: { color: "#cccc" },
+  }}
+  FormHelperTextProps={{
+    style: { color: "#cccc" },
+  }}
         />
 
     </Box>
